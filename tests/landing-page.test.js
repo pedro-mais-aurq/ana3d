@@ -9,7 +9,7 @@ describe("landing page da Ana 3D", () => {
     const html = await readFile(htmlUrl, "utf8");
 
     expect(html).toContain("assets/image/ana3d-logo.svg");
-    expect(html).toContain("assets/image/ana3d-icon.png");
+    expect(html).toContain("assets/image/ana3d_logoA.svg");
     expect(html).not.toContain("insight-logo");
   });
 
