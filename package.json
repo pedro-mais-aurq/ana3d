@@ -1,0 +1,22 @@
+{
+  "name": "ana3d",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing page da Ana 3D para itens personalizados em impressão 3D.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.112.3",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1",
+    "vite": "8.2.1",
+    "vitest": "4.1.10"
+  }
+}

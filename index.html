@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana 3D — Itens personalizados em impressão 3D</title>
+<meta name="description" content="A Ana 3D transforma fotos e ideias de família em peças 3D personalizadas: envie seu arquivo, veja o modelo e receba em casa.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/png" href="assets/image/ana3d-icon.png">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <img class="logo" src="assets/image/ana3d-logo.svg" alt="Ana 3D">
+    <nav class="navlinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#portfolio">Portfólio</a>
+    </nav>
+    <a class="btn dark small" href="#imprimir">Enviar meu modelo</a>
+  </div>
+</header>
+
+<main>
+
+<section class="container hero">
+  <div>
+    <div class="kicker">Ana 3D · itens personalizados</div>
+    <h1>Sua família,<br>em uma peça só dela.</h1>
+    <p class="lede">Transformamos fotos, nomes e pequenos detalhes do seu dia a dia em peças 3D feitas sob medida — para presentear, decorar ou guardar uma lembrança.</p>
+    <div class="actions">
+      <a class="btn dark" href="#imprimir">Enviar meu modelo</a>
+      <a class="btn light" href="#como-funciona">Como funciona</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img class="hero-arch" src="assets/image/ana3d-icon.png" alt="Ícone da Ana 3D: um arco rosa com a silhueta de uma família e um coração">
+  </div>
+</section>
+
+<section id="sobre" class="section">
+<div class="container about">
+  <img class="about-mark" src="assets/image/ana3d-icon.png" alt="">
+  <div class="about-copy">
+    <div class="kicker">Quem faz</div>
+    <h2>Um ateliê pequeno,<br>com atenção grande.</h2>
+    <p>A Ana 3D nasceu para colocar carinho em cada peça: cada pedido é conferido à mão, cor por cor, antes de ir para a impressora.</p>
+    <p>Trabalhamos com famílias, casais e times pequenos que querem um presente com significado — não um item de prateleira.</p>
+  </div>
+</div>
+</section>
+
+<section id="servicos" class="section tinted">
+<div class="container">
+  <div class="section-head">
+    <h2>Feito para o<br>seu momento.</h2>
+    <p>Três jeitos de transformar uma ideia em peça física.</p>
+  </div>
+  <div class="features">
+    <article class="feature-card">
+      <div class="feature-icon">❤</div>
+      <h3>Presentes de família</h3>
+      <p>Silhuetas, nomes e datas viram um objeto para guardar — aniversários, chás de bebê, casamentos.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">✎</div>
+      <h3>Personalização sob medida</h3>
+      <p>Você envia a referência, conversamos sobre cor, tamanho e acabamento antes de qualquer impressão.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">⌂</div>
+      <h3>Decoração e utilidades</h3>
+      <p>Porta-retratos, organizadores e enfeites pensados para o dia a dia da sua casa.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="como-funciona" class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Do arquivo<br>à sua casa.</h2>
+    <p>Três passos, do envio até a entrega.</p>
+  </div>
+  <div class="steps">
+    <article class="step">
+      <div class="num">01</div>
+      <h3>Envie sua ideia</h3>
+      <p>Suba um modelo 3D pronto ou nos conte o que você imagina — ajudamos a preparar o arquivo.</p>
+    </article>
+    <article class="step">
+      <div class="num">02</div>
+      <h3>Escolha os detalhes</h3>
+      <p>Definimos juntas cor, material e acabamento antes de qualquer coisa ir para a impressora.</p>
+    </article>
+    <article class="step">
+      <div class="num">03</div>
+      <h3>Receba com carinho</h3>
+      <p>Sua peça é embalada e enviada com o mesmo cuidado que teve na produção.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="portfolio" class="section tinted">
+<div class="container">
+  <div class="section-head">
+    <h2>Peças que já<br>saíram daqui.</h2>
+    <p>Uma amostra do que produzimos para outras famílias.</p>
+  </div>
+  <div id="gallery-grid" class="gallery-grid">
+    <!-- itens injetados via JS a partir de galleryItems, ver script no fim do body -->
+  </div>
+</div>
+</section>
+
+<section id="imprimir" class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Veja seu modelo<br>antes de imprimir.</h2>
+    <p>Envie um arquivo STL, 3MF ou OBJ e visualize em 3D no navegador.</p>
+  </div>
+  <div class="print">
+    <div
+      class="upload"
+      id="upload-panel"
+      data-upload-root
+      data-upload-state="idle"
+    >
+      <div class="upload-summary">
+        <div class="kicker" data-upload-eyebrow>Arquivo 3D</div>
+        <h3 data-upload-title>Solte seu<br>modelo aqui.</h3>
+        <p
+          class="upload-file-meta"
+          id="upload-file-meta"
+          data-upload-file-meta
+          hidden
+        ></p>
+      </div>
+      <div
+        class="drop"
+        id="upload-dropzone"
+        data-upload-dropzone
+      >
+        <span data-upload-limits>Arraste STL, 3MF ou OBJ</span><br>
+        <button
+          class="upload-select"
+          type="button"
+          data-upload-select
+        >ou selecione um arquivo</button>
+      </div>
+      <input
+        class="upload-input"
+        id="upload-file"
+        type="file"
+        data-upload-input
+        aria-label="Selecionar arquivo 3D"
+        aria-describedby="upload-file-meta upload-status"
+        hidden
+      >
+      <p
+        class="upload-status"
+        id="upload-status"
+        data-upload-status
+        aria-live="polite"
+      ></p>
+      <div class="upload-actions" data-upload-actions hidden>
+        <button class="upload-action" type="button" data-upload-retry hidden>Tentar novamente</button>
+        <button class="upload-action" type="button" data-upload-replace>Substituir</button>
+        <button class="upload-action secondary" type="button" data-upload-remove>Remover</button>
+      </div>
+      <section class="analysis-panel" data-analysis-panel hidden>
+        <p class="analysis-stage" data-analysis-stage aria-live="polite"></p>
+        <p class="analysis-error" data-analysis-error hidden></p>
+        <button class="upload-action" type="button" data-analysis-retry hidden>Tentar analisar novamente</button>
+        <div class="model-viewer" data-model-viewer aria-label="Visualização 3D do modelo"></div>
+        <p class="viewer-unavailable" data-viewer-unavailable hidden>Preview 3D indisponível.</p>
+        <div class="analysis-result" data-analysis-result hidden>
+          <label class="analysis-unit-label">
+            Unidade do modelo
+            <select data-analysis-unit>
+              <option value="">Não definida</option>
+              <option value="mm">Milímetro (mm)</option>
+              <option value="cm">Centímetro (cm)</option>
+              <option value="m">Metro (m)</option>
+              <option value="inch">Polegada (inch)</option>
+            </select>
+          </label>
+          <div class="analysis-grid">
+            <div><span>Dimensões</span><strong data-analysis-dimensions>—</strong></div>
+            <div><span>Triângulos</span><strong data-analysis-triangles>—</strong></div>
+            <div><span>Meshes</span><strong data-analysis-meshes>—</strong></div>
+            <div><span>Vértices</span><strong data-analysis-vertices>—</strong></div>
+            <div><span>Área superficial</span><strong data-analysis-area>—</strong></div>
+            <div><span>Volume</span><strong data-analysis-volume>—</strong></div>
+            <div><span>Malha fechada</span><strong data-analysis-watertight>—</strong></div>
+            <div><span>Arestas abertas</span><strong data-analysis-open-edges>—</strong></div>
+            <div><span>Non-manifold</span><strong data-analysis-non-manifold>—</strong></div>
+            <div><span>Componentes</span><strong data-analysis-components>—</strong></div>
+          </div>
+          <p class="analysis-warnings" data-analysis-warnings hidden></p>
+        </div>
+      </section>
+    </div>
+    <div class="quote">
+      <div class="kicker">Estimativa</div>
+      <div class="quote-row"><span>Material</span><strong>PLA</strong></div>
+      <div class="quote-row"><span>Qualidade</span><strong>0,20 mm</strong></div>
+      <div class="quote-row"><span>Quantidade</span><strong>1 peça</strong></div>
+      <div class="quote-row"><span>Prazo estimado</span><strong>3–5 dias</strong></div>
+      <div style="margin-top:25px"><div class="kicker">A partir de</div><div class="price">R$ 00,00</div></div>
+      <a class="btn dark" style="margin-top:24px;width:100%" href="#contato">Solicitar orçamento</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="contato" class="section tinted">
+<div class="container">
+  <div class="cta-card">
+    <div>
+      <h2>Vamos criar sua peça?</h2>
+      <p>Conte pra gente sua ideia e enviamos um orçamento personalizado em até 1 dia útil.</p>
+    </div>
+    <a class="btn dark" href="mailto:contato@ana3d.com.br">Falar com a Ana 3D</a>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+  <img src="assets/image/ana3d-logo.svg" alt="Ana 3D">
+  <small>Ana 3D — itens personalizados em impressão 3D.</small>
+</div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
